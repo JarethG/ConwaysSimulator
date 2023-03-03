@@ -52,7 +52,7 @@ public class ConwaysBoard {
         paint.setStyle(Paint.Style.STROKE);
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                if (getCellState(x, y) != 0) {
+                if (getCellState(x, y) == 0) {
                     paint.setStyle(Paint.Style.STROKE);
                 } else {
                     paint.setStyle(Paint.Style.FILL);

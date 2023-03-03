@@ -11,11 +11,11 @@ public class Rules {
 
     public final Rule[] ConwaysRules = {
             // The underpopulation rule
-            (Pair<Point, ConwaysBoard> p) -> neighbours(p) < 2 ? DEAD : ALIVE,
+            (Pair<Point, ConwaysBoard> p) -> neighbours(p) < 2 ? DEAD : null,
             // The reproduction rule
-            (Pair<Point, ConwaysBoard> p) -> neighbours(p) == 3 ? ALIVE : DEAD,
+            (Pair<Point, ConwaysBoard> p) -> neighbours(p) == 3 ? ALIVE : null,
             // The overpopulation rule
-            (Pair<Point, ConwaysBoard> p) -> neighbours(p) > 3 ? DEAD : ALIVE,
+            (Pair<Point, ConwaysBoard> p) -> neighbours(p) > 3 ? DEAD : null,
     };
 
     public int neighbours(Pair<Point, ConwaysBoard> pair) {
